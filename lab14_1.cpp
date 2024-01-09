@@ -1,9 +1,25 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 template <typename T>
 void insertionSort(T d[],int N){
-
+    //1 row
+    for(int i = 1 ; i < N ; i++){
+        T x;
+        int a = i;
+        while(d[a] > d[a-1] && a > 0){
+            x = d[a];
+            d[a] = d[a-1];
+            d[a-1] = x;
+            a--;
+        } 
+        
+        //print out
+        cout << "Pass "<< i << ":";
+        for(int j = 0; j < 10; j++) cout << d[j] << " ";
+	        cout << "\n";
+    }
+    
 }
 
 int main(){
